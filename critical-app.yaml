@@ -1,0 +1,10 @@
+apiVersion: apps.shieldx.local/v1
+kind: ReplicaMaster
+metadata:
+  name: critical-frontend
+  namespace: sre-mart
+  labels:
+    policy: critical
+spec:
+  deploymentName: frontend-v2
+  replicas: 3

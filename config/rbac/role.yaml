@@ -1,0 +1,42 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - apps
+  resources:
+  - deployments
+  verbs:
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apps.shieldx.local
+  resources:
+  - replicamasters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apps.shieldx.local
+  resources:
+  - replicamasters/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - apps.shieldx.local
+  resources:
+  - replicamasters/status
+  verbs:
+  - get
+  - patch
+  - update

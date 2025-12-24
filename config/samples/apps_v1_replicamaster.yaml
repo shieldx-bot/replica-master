@@ -1,0 +1,8 @@
+apiVersion: apps.shieldx.local/v1
+kind: ReplicaMaster
+metadata:
+  name: frontend-controller
+  namespace: sre-mart # Lưu ý namespace phải đúng
+spec:
+  deploymentName: frontend-v2 # Tên deployment muốn quản lý
+  replicas: 3 # Số lượng mong muốn bắt buộc

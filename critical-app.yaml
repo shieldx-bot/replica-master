@@ -4,7 +4,7 @@ metadata:
   name: critical-frontend
   namespace: sre-mart
   labels:
-    policy: critical
+    policy: protected
 spec:
-  deploymentName: frontend-v2
+  deploymentName: frontend
   replicas: 3
